@@ -1,0 +1,109 @@
+@use "./variables" as v;
+
+// Header
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: v.$color-1;
+
+  .navbar {
+    padding: 0;
+    align-items: center;
+    position: relative;
+
+    ul:first-child {
+      display: flex;
+      gap: 0.85em;
+      margin-bottom: 0;
+    }
+
+    .dropdown-icon {
+      font-size: 0.8rem;
+      color: rgb(114, 114, 114);
+    }
+
+    li a {
+      font-size: 0.95rem;
+    }
+
+    .dropdown {
+      display: none;
+      animation: dropdown-open 300ms ease;
+    }
+
+    .dropdown.dropdown-open {
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-35%);
+      width: 175px;
+      padding: 0.25em 0.75em;
+      box-shadow: 0 0 5px -1px rgb(200, 200, 200);
+      border-radius: 5px;
+
+      li {
+        padding: 0.25em 1em;
+        margin: 0.25em 0;
+        border-bottom: 1px solid rgba(208, 208, 208, 0.65);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .dropdown.dropdown-open.inner-dropdown {
+      top: 50%;
+      left: 175px;
+      transform: translateY(-10%);
+      width: 200px;
+    }
+  }
+
+  .socials {
+    i {
+      cursor: pointer;
+      margin: 0 0.25em;
+    }
+  }
+
+  .search-form {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 7.5em;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 0.25em 0.75em;
+    border-radius: 5px;
+
+    span:first-child {
+      margin-right: 0.35em;
+    }
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .search-form.show-form {
+    display: block;
+  }
+}
