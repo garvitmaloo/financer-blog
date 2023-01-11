@@ -1,7 +1,7 @@
 @use "./variables" as v;
+@use "./mixins" as m;
 
 // Header
-
 header {
   position: fixed;
   top: 0;
@@ -44,6 +44,8 @@ header {
       left: 50%;
       transform: translateX(-35%);
       width: 175px;
+      height: min-content;
+      overflow: hidden;
       padding: 0.25em 0.75em;
       box-shadow: 0 0 5px -1px rgb(200, 200, 200);
       border-radius: 5px;
@@ -59,51 +61,93 @@ header {
       }
     }
 
-    .dropdown.dropdown-open.inner-dropdown {
-      top: 50%;
-      left: 175px;
-      transform: translateY(-10%);
-      width: 200px;
+    .mobile-nav-close-icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 992px) {
+      display: none;
     }
   }
 
   .socials {
+    position: relative;
+
     i {
       cursor: pointer;
-      margin: 0 0.25em;
-    }
-  }
-
-  .search-form {
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 7.5em;
-    transform: translateY(-50%);
-    background-color: white;
-    padding: 0.25em 0.75em;
-    border-radius: 5px;
-
-    span:first-child {
-      margin-right: 0.35em;
+      margin: 0 0.15em;
     }
 
-    input {
-      background-color: transparent;
-      border: none;
-      outline: none;
+    .search-form {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: max-content;
+      background-color: white;
+      padding: 0.25em 0.75em;
+      border-radius: 5px;
 
-      &:focus {
+      span:first-child {
+        margin-right: 0.35em;
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
         outline: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      i {
+        cursor: pointer;
       }
     }
 
-    i {
-      cursor: pointer;
+    .search-form.show-form {
+      display: block;
     }
   }
+}
 
-  .search-form.show-form {
-    display: block;
+// Mobile Navigation bar
+.mobile-nav-active {
+  @media only screen and (max-width: 992px) {
+    .navbar {
+      display: block;
+      position: absolute;
+      inset: 0 0;
+      height: 100vh;
+      backdrop-filter: grayscale(50%);
+      background-color: rgba(0, 0, 0, 0.65);
+      z-index: 1000;
+      border-radius: 5px;
+
+      ul {
+        position: absolute;
+        inset: 55px 15px 10px 15px;
+        padding: 2em;
+        border-radius: 5px;
+        background-color: white;
+        flex-direction: column;
+        overflow-y: scroll;
+
+        .dropdown.dropdown-open {
+          top: 135px;
+          left: 90px;
+        }
+      }
+
+      .mobile-nav-close-icon {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        color: white;
+      }
+    }
   }
 }

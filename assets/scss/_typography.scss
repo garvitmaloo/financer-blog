@@ -1,3 +1,10 @@
+@use "./mixins" as m;
+
 .nav-logo {
   font-size: 1.5rem;
+  margin: 0;
+
+  @include m.respond(phone) {
+    font-size: 1.25rem;
+  }
 }
