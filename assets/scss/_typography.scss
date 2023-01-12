@@ -8,3 +8,22 @@
     font-size: 1.25rem;
   }
 }
+
+.carousel-desc,
+.carousel-head {
+  padding: 0 3rem;
+  color: white;
+}
+
+.carousel-head {
+  @include m.respond(phone) {
+    padding: 0;
+    font-size: 1.25rem;
+  }
+}
+
+.carousel-desc {
+  @include m.respond(tab-land) {
+    display: none;
+  }
+}

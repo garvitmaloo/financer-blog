@@ -11,6 +11,7 @@ header {
   display: flex;
   align-items: center;
   background-color: v.$color-1;
+  z-index: 2000;
 
   .navbar {
     padding: 0;
@@ -34,6 +35,7 @@ header {
 
     .dropdown {
       display: none;
+      background-color: white;
       animation: dropdown-open 300ms ease;
     }
 
@@ -112,6 +114,7 @@ header {
     }
   }
 }
+// Header finish
 
 // Mobile Navigation bar
 .mobile-nav-active {
@@ -151,3 +154,31 @@ header {
     }
   }
 }
+// Mobile Nav finish
+
+// Hero section
+.hero {
+  margin-top: 90px;
+
+  .carousel {
+    &-item {
+      position: relative;
+
+      .text-container {
+        padding: 1.5em;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        inset: 0 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
+    img {
+      min-height: 350px;
+      object-fit: cover;
+    }
+  }
+}
+// Hero section finish

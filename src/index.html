@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
 
-    <!-- Bootstrap import from CDN -->
+    <!-- Bootstrap styles import from CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
@@ -38,11 +38,20 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Bootstrap scripts from CDN -->
+    <script
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+      integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- Custom JS -->
     <script async src="../assets/js/script.js"></script>
   </head>
 
-  <body class="mobile-nav-active">
+  <body class="">
     <header>
       <div
         class="container d-flex align-items-center justify-content-between py-lg-3"
@@ -109,5 +118,107 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <section class="container-md hero" id="hero">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <a href="single-post.html" target="_blank">
+              <div class="carousel-item active">
+                <div class="text-container">
+                  <h3 class="carousel-head">
+                    This is why money never GROWS by putting it in a savings
+                    account.
+                  </h3>
+                  <p class="carousel-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi quas voluptatum voluptates. Eligendi iusto repudiandae
+                    sequi, itaque excepturi molestiae eaque esse tempora
+                    accusantium deserunt natus aut.
+                  </p>
+                </div>
+                <img
+                  alt="Money Image"
+                  srcset="
+                    ../assets/images/money.jpg       1600w,
+                    ../assets/images/money-small.jpg  800w
+                  "
+                  sizes="(max-width: 1400px) 80vw, (max-width: 768px): 50vw"
+                  class="d-block w-100"
+                />
+              </div>
+            </a>
+            <a href="single-post.html" target="_blank">
+              <div class="carousel-item">
+                <div class="text-container">
+                  <h3 class="carousel-head">
+                    The future of crypto investments. A complete guide.
+                  </h3>
+                  <p class="carousel-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi quas voluptatum voluptates. Eligendi iusto repudiandae
+                    sequi.
+                  </p>
+                </div>
+                <img
+                  alt="Crypto Image"
+                  srcset="
+                    ../assets/images/crypto.jpg       1600w,
+                    ../assets/images/crypto-small.jpg  800w
+                  "
+                  sizes="(max-width: 1400px) 80vw, (max-width: 768px): 50vw"
+                  class="d-block w-100"
+                />
+              </div>
+            </a>
+            <a href="single-post.html" target="_blank">
+              <div class="carousel-item">
+                <div class="text-container">
+                  <h3 class="carousel-head">
+                    A smarter way of managing your financial statements.
+                  </h3>
+                  <p class="carousel-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium corporis perspiciatis inventore est in maiores
+                    aperiam iure libero nulla excepturi.
+                  </p>
+                </div>
+                <img
+                  alt="Statement Image"
+                  srcset="
+                    ../assets/images/statement.jpg       1600w,
+                    ../assets/images/statement-small.jpg  800w
+                  "
+                  sizes="(max-width: 1400px) 80vw, (max-width: 768px): 50vw"
+                  class="d-block w-100"
+                />
+              </div>
+            </a>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

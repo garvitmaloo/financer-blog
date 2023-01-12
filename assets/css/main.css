@@ -8,6 +8,10 @@ body {
   position: relative;
 }
 
+section {
+  margin-bottom: 5rem;
+}
+
 ul,
 ol {
   list-style: none;
@@ -48,6 +52,25 @@ a:active, a:hover, a:focus {
   }
 }
 
+.carousel-desc,
+.carousel-head {
+  padding: 0 3rem;
+  color: white;
+}
+
+@media only screen and (max-width: 576px) {
+  .carousel-head {
+    padding: 0;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .carousel-desc {
+    display: none;
+  }
+}
+
 @keyframes dropdown-open {
   0% {
     height: 0;
@@ -74,6 +97,7 @@ header {
   display: flex;
   align-items: center;
   background-color: #edede9;
+  z-index: 2000;
 }
 header .navbar {
   padding: 0;
@@ -94,6 +118,7 @@ header .navbar li a {
 }
 header .navbar .dropdown {
   display: none;
+  background-color: white;
   animation: dropdown-open 300ms ease;
 }
 header .navbar .dropdown.dropdown-open {
@@ -191,6 +216,26 @@ header .socials .search-form.show-form {
     right: 20px;
     color: white;
   }
+}
+
+.hero {
+  margin-top: 90px;
+}
+.hero .carousel-item {
+  position: relative;
+}
+.hero .carousel-item .text-container {
+  padding: 1.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero .carousel img {
+  min-height: 350px;
+  object-fit: cover;
 }
 
 .mobile-nav-toggle-btn {
