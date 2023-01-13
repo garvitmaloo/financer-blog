@@ -1,4 +1,5 @@
 @use "./mixins" as m;
+@use "./variables" as v;
 
 .nav-logo {
   font-size: 1.5rem;
@@ -26,4 +27,31 @@
   @include m.respond(tab-land) {
     display: none;
   }
+}
+
+// Typography for posts cards
+.post-metadata span {
+  color: v.$black-60;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+
+  &.dot {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: v.$black-60;
+    padding: 0.15em;
+  }
+}
+
+.post-card .author-name {
+  font-size: 1.05rem;
+  color: v.$black-75;
+}
+
+.post-desc {
+  font-size: 0.95rem;
+  color: v.$black-75;
 }
