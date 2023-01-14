@@ -42,6 +42,10 @@ a:active, a:hover, a:focus {
   color: inherit;
 }
 
+.bottom-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 .nav-logo {
   font-size: 1.5rem;
   margin: 0;
@@ -86,12 +90,11 @@ a:active, a:hover, a:focus {
   padding: 0.15em;
 }
 
-.post-card .author-name {
+.author-name--1 {
   font-size: 1.05rem;
   color: rgba(0, 0, 0, 0.75);
 }
-
-.trending .author-name {
+.author-name--2 {
   font-size: 0.85rem;
 }
 
@@ -284,6 +287,10 @@ header .socials .search-form.show-form {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.entrepreneurship-layout .upper-block {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.95);
+}
+
 .mobile-nav-toggle-btn {
   font-size: 1.25rem;
   border: 1px solid rgb(213, 213, 213);
@@ -308,10 +315,12 @@ header .socials .search-form.show-form {
   width: 100%;
   min-height: min-content;
 }
-.post-card img {
-  max-width: 100%;
-  aspect-ratio: 3/2;
-  height: auto;
+.post-card a {
+  flex: 1;
+}
+.post-card a img {
+  width: 100%;
+  object-fit: cover;
 }
 .post-card .post-text .author-details img {
   height: 50px;

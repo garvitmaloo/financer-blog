@@ -1,3 +1,5 @@
+@use "./variables" as v;
+
 * {
   margin: 0;
   padding: 0;
@@ -43,4 +45,8 @@ a {
   &:focus {
     color: inherit;
   }
+}
+
+.bottom-border {
+  border-bottom: v.$primary-border;
 }
