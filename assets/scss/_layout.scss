@@ -182,3 +182,28 @@ header {
   }
 }
 // Hero section finish
+
+// Posts layout
+.posts-layout {
+  .post-container {
+    &--1 {
+      border: v.$primary-border;
+      border-top: none;
+      border-bottom: none;
+      min-width: 50%;
+    }
+  }
+
+  .trending {
+    border: v.$primary-border;
+    height: min-content;
+
+    h1 {
+      border-bottom: v.$primary-border;
+    }
+
+    .post-card {
+      border-bottom: v.$primary-border;
+    }
+  }
+}

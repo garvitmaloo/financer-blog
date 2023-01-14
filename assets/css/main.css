@@ -91,6 +91,10 @@ a:active, a:hover, a:focus {
   color: rgba(0, 0, 0, 0.75);
 }
 
+.trending .author-name {
+  font-size: 0.85rem;
+}
+
 .post-desc {
   font-size: 0.95rem;
   color: rgba(0, 0, 0, 0.75);
@@ -263,6 +267,23 @@ header .socials .search-form.show-form {
   object-fit: cover;
 }
 
+.posts-layout .post-container--1 {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: none;
+  border-bottom: none;
+  min-width: 50%;
+}
+.posts-layout .trending {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  height: min-content;
+}
+.posts-layout .trending h1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.posts-layout .trending .post-card {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 .mobile-nav-toggle-btn {
   font-size: 1.25rem;
   border: 1px solid rgb(213, 213, 213);
@@ -289,6 +310,8 @@ header .socials .search-form.show-form {
 }
 .post-card img {
   max-width: 100%;
+  aspect-ratio: 3/2;
+  height: auto;
 }
 .post-card .post-text .author-details img {
   height: 50px;
