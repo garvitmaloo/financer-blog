@@ -46,6 +46,10 @@ a:active, a:hover, a:focus {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.upper-block {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.95);
+}
+
 .nav-logo {
   font-size: 1.5rem;
   margin: 0;
@@ -285,10 +289,6 @@ header .socials .search-form.show-form {
 }
 .posts-layout .trending .post-card {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.entrepreneurship-layout .upper-block {
-  border-bottom: 3px solid rgba(0, 0, 0, 0.95);
 }
 
 .mobile-nav-toggle-btn {
