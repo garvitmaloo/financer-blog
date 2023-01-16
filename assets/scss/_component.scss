@@ -47,5 +47,9 @@
         color: v.$black-95;
       }
     }
+
+    @include m.respond(tab-port) {
+      max-width: 95% !important;
+    }
   }
 }

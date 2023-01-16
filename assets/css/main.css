@@ -107,6 +107,12 @@ a:active, a:hover, a:focus {
   color: rgba(0, 0, 0, 0.75);
 }
 
+@media only screen and (max-width: 576px) {
+  .entrepreneurship-layout h1:first-child {
+    font-size: 1.4rem !important;
+  }
+}
+
 .footer-desc,
 .footer-link {
   font-size: 0.9rem;
@@ -367,6 +373,11 @@ header .socials .search-form.show-form {
 }
 .post-card .post-text .author-details .author-name {
   color: rgba(0, 0, 0, 0.95);
+}
+@media only screen and (max-width: 768px) {
+  .post-card .post-text {
+    max-width: 95% !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

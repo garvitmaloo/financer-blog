@@ -62,6 +62,15 @@
   color: v.$black-75;
 }
 
+// Entrepreneurship heading
+.entrepreneurship-layout h1 {
+  &:first-child {
+    @include m.respond(phone) {
+      font-size: 1.4rem !important;
+    }
+  }
+}
+
 // Footer text styles
 .footer-desc,
 .footer-link {
