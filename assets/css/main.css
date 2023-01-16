@@ -107,6 +107,28 @@ a:active, a:hover, a:focus {
   color: rgba(0, 0, 0, 0.75);
 }
 
+.footer-desc,
+.footer-link {
+  font-size: 0.9rem;
+  color: rgb(222, 222, 222);
+}
+
+.footer-upper .post-metadata span {
+  color: rgb(222, 222, 222);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.footer-upper .post-title {
+  font-size: 0.95rem !important;
+  cursor: pointer;
+}
+
+.footer-upper .author-name--2 {
+  color: rgb(222, 222, 222);
+  font-size: 0.85rem;
+}
+
 @keyframes dropdown-open {
   0% {
     height: 0;
@@ -289,6 +311,21 @@ header .socials .search-form.show-form {
 }
 .posts-layout .trending .post-card {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.footer-upper {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+}
+.footer-upper .list-container--1 {
+  flex: 1;
+}
+.footer-upper .list-container--2 {
+  flex: 1;
+}
+.footer-lower {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: rgb(222, 222, 222);
 }
 
 .mobile-nav-toggle-btn {

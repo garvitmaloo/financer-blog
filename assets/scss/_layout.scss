@@ -207,3 +207,26 @@ header {
     }
   }
 }
+
+// Footer upper
+.footer {
+  &-upper {
+    background-color: v.$black-85;
+    color: white;
+
+    .list-container {
+      &--1 {
+        flex: 1;
+      }
+
+      &--2 {
+        flex: 1;
+      }
+    }
+  }
+
+  &-lower {
+    background-color: v.$black-95;
+    color: v.$gray-3;
+  }
+}

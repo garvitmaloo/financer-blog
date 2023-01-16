@@ -61,3 +61,26 @@
   font-size: 0.95rem;
   color: v.$black-75;
 }
+
+// Footer text styles
+.footer-desc,
+.footer-link {
+  font-size: 0.9rem;
+  color: v.$gray-3;
+}
+
+.footer-upper .post-metadata span {
+  color: v.$gray-3;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.footer-upper .post-title {
+  font-size: 0.95rem !important;
+  cursor: pointer;
+}
+
+.footer-upper .author-name--2 {
+  color: v.$gray-3;
+  font-size: 0.85rem;
+}
