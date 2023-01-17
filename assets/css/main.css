@@ -152,6 +152,17 @@ a:active, a:hover, a:focus {
     opacity: 1;
   }
 }
+section {
+  transform: translateY(4.5rem);
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+section.reveal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 header {
   position: fixed;
   top: 0;

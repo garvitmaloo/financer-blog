@@ -8,7 +8,9 @@ const searchForm = document.querySelector(".search-form");
 const mobileNavCloseIcon = document.querySelector(".mobile-nav-close-icon");
 const body = document.querySelector("body");
 const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle-btn");
+const allSections = document.querySelectorAll("section");
 
+// For making the navbar work
 dropdownLink.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -29,4 +31,25 @@ mobileNavToggleBtn.addEventListener("click", function () {
 
 mobileNavCloseIcon.addEventListener("click", function () {
   body.classList.remove("mobile-nav-active");
+});
+//////////////////////////////////////////////////
+
+// For animating the sections reveal
+
+const revealFunction = (entries, observer) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.add("reveal");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealFunction, {
+  root: null,
+  threshold: 0.1,
+});
+
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
 });
